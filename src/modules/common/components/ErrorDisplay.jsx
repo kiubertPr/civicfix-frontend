@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 const ErrorDisplay = ({ backendErrors, handleCancelClick }) => {
 
     const getErrorMessage = (error) => {
-        console.log("Error recibido:", error);
-
         switch (error.globalError) {
             case "project.exceptions.IncorrectLoginException":
                 return "El nombre de usuario o contraseña no son válidos. Verifica los datos e intenta nuevamente.";

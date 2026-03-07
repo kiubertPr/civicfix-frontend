@@ -43,7 +43,6 @@ const Login = () => {
 
   const handleGoogleSuccess = async (token) => {
     setBackendErrors(null)
-    console.log("Token de Google:", token)
     dispatch(
       actions.googleLogin(
         token,
