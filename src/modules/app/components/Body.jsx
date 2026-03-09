@@ -9,7 +9,7 @@ import {Login, SignUp, Profile, Logout, UpdateProfile, UserSection, UserPointsHi
 import { PostForm, PostDetail, PostEdit } from '../../posts';
 import {ContactForm} from '../../mail';
 import {SurveyForm} from '../../surveys';
-import { PrivateRoute } from '../../common';
+import { PrivateRoute, DemoWarning } from '../../common';
 
 const Body = () => {
 
@@ -20,6 +20,7 @@ const Body = () => {
    return (
 
         <div id='_body' className="flex justify-center w-full h-full">
+            <DemoWarning/>
             <AppGlobalComponents/>
             <Routes>
                 <Route path="/*" element={<Feed/>}/>

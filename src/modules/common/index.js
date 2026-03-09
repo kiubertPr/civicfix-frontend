@@ -10,3 +10,4 @@ export {default as ImageViewer} from "./components/ImageViewer";
 export {default as FilterComponent} from "./components/FilterComponent";
 export {formatRelativeTime} from "./functions/dateFormatter";
 export {default as PrivateRoute} from "./components/PrivateRoute";
+export {default as DemoWarning} from "./components/DemoWarning";
