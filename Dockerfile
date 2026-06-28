@@ -1,12 +1,11 @@
-FROM node:22-alpine AS build
+FROM node:22-slim AS build
 
 WORKDIR /app
 
 RUN corepack enable && corepack prepare pnpm@11 --activate
 
-COPY package.json pnpm-lock.yaml* ./
+COPY package.json pnpm-lock.yaml ./
 
-# fallback si NO hay lockfile
 RUN pnpm install
 
 COPY . .
