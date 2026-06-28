@@ -2,15 +2,11 @@ FROM node:22-slim AS build
 
 WORKDIR /app
 
-RUN corepack enable && corepack prepare pnpm@11 --activate
-
-COPY package.json pnpm-lock.yaml ./
-
-RUN pnpm install
+COPY package.json package-lock.json ./
+RUN npm ci
 
 COPY . .
-
-RUN pnpm build
+RUN npm run build
 
 
 FROM nginx:alpine
