@@ -1,8 +1,9 @@
 import { GoogleOAuthProvider } from "@react-oauth/google"
+import config from "../../../config"
 
 export default function GoogleAuthProviderWrapper({ children }) {
  
-  const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || ""
+  const clientId = config.googleClientId;
 
   if (!clientId) {
     return <div>Error: Google Client ID no configurado.</div>
