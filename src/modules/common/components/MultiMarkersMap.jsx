@@ -30,7 +30,7 @@ const MultiMarkersMap = ({
   const map = useRef(null)
   const markersRef = useRef([])
   const geocoder = useRef(null)
-  mapboxgl.setTelemetryEnabled(false);
+
   useEffect(() => {
     mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN
 
