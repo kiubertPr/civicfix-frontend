@@ -1,5 +1,4 @@
 import NetworkError from './NetworkError';
-import env from '../config';
 
 const SERVICE_TOKEN_NAME = 'serviceToken';
 
@@ -124,6 +123,6 @@ export const config = (method, body) => {
 }
 
 export const appFetch = (path, options, onSuccess, onErrors) =>
-    fetch(`${env.backendUrl}${path}`, options)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}${path}`, options)
         .then(response => handleResponse(response, onSuccess, onErrors))
         .catch(networkErrorCallback);

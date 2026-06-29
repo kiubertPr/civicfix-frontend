@@ -3,9 +3,8 @@ import mapboxgl from "mapbox-gl"
 import "mapbox-gl/dist/mapbox-gl.css"
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css"
-import config from "../../../config"
 
-const MAPBOX_ACCESS_TOKEN = config.mapboxToken
+const MAPBOX_ACCESS_TOKEN = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN
 
 const MapLocation = ({ onLocationSelected, initialLocation = null, defaultLat = 43.35247, defaultLng = -8.406482 }) => {
   const mapContainer = useRef(null)
