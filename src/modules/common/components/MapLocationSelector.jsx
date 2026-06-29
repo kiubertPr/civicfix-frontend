@@ -19,6 +19,7 @@ const MapLocation = ({ onLocationSelected, initialLocation = null, defaultLat = 
   const [lat, setLat] = useState(initialLat)
   const [zoom, setZoom] = useState(12)
   const [mapLoaded, setMapLoaded] = useState(false)
+  mapboxgl.setTelemetryEnabled(false);
 
   useEffect(() => {
     if (!mapContainer.current) return
